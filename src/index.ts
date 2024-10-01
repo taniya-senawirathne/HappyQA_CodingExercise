@@ -7,6 +7,7 @@ const outputFilePath = 'solution.txt';
 
 // Read the release data from the input file
 const releases = FileHandler.readReleases(inputFilePath);
+console.log("Input releses details:",releases)
 
 // Initialize the release selector and compute the maximum number of releases
 const releaseSelector = new ReleaseSelector(releases);
@@ -14,3 +15,4 @@ const selectedReleases = releaseSelector.selectMaxReleases();
 
 // Write the solution (max number of releases and their details) to the output file
 FileHandler.writeSolution(outputFilePath, selectedReleases);
+console.log("Max number of releses and details:",selectedReleases)
